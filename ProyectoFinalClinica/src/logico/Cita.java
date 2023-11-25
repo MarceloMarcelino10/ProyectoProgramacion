@@ -39,4 +39,10 @@ public class Cita {
 	public void setFechaCita(Date fechaCita) {
 		this.fechaCita = fechaCita;
 	}
+	
+	public void prueba() {
+		
+		System.out.println("");
+		
+		}
 }
