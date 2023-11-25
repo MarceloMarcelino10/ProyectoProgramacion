@@ -5,9 +5,9 @@ public class Paciente extends Persona {
 	private Vivienda miVivienda;
 	private HistoriaClinica miHistoria;
 	
-	public Paciente(String codigo, String cedula, String nombre, String apellidos, String genero, Vivienda miVivienda,
-			HistoriaClinica miHistoria) {
-		super(codigo, cedula, nombre, apellidos, genero);
+	public Paciente(String codigo, String cedula, String nombre, String apellidos, String genero, String user,
+			String password, Vivienda miVivienda, HistoriaClinica miHistoria) {
+		super(codigo, cedula, nombre, apellidos, genero, user, password);
 		this.miVivienda = miVivienda;
 		this.miHistoria = miHistoria;
 	}
