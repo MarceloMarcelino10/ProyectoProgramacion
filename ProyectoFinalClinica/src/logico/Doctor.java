@@ -6,16 +6,16 @@ public class Doctor extends Persona {
 	
 	private String especialidad;
 	boolean enServicio = false;
-	private ArrayList<Paciente> pacientesTratados;
-	private ArrayList<Consulta> consultasTratadas;
+	private ArrayList<Paciente> misPacientesTratados;
+	private ArrayList<Consulta> misConsultasTratadas;
 	
 	public Doctor(String codigo, String cedula, String nombre, String apellidos, String genero, String user,
 			String password, String especialidad, boolean enServicio) {
 		super(codigo, cedula, nombre, apellidos, genero, user, password);
 		this.especialidad = especialidad;
 		this.enServicio = enServicio;
-		this.pacientesTratados = new ArrayList<Paciente>();
-		this.consultasTratadas = new ArrayList<Consulta>();
+		this.misPacientesTratados = new ArrayList<Paciente>();
+		this.misConsultasTratadas = new ArrayList<Consulta>();
 	}
 
 	public String getEspecialidad() {
@@ -34,31 +34,47 @@ public class Doctor extends Persona {
 		this.enServicio = enServicio;
 	}
 	
+	public ArrayList<Paciente> getMisPacientesTratados() {
+		return misPacientesTratados;
+	}
+
+	public void setMisPacientesTratados(ArrayList<Paciente> misPacientesTratados) {
+		this.misPacientesTratados = misPacientesTratados;
+	}
+
+	public ArrayList<Consulta> getMisConsultasTratadas() {
+		return misConsultasTratadas;
+	}
+
+	public void setMisConsultasTratadas(ArrayList<Consulta> misConsultasTratadas) {
+		this.misConsultasTratadas = misConsultasTratadas;
+	}
+	
 	//METODOS PARA INSERTAR:
 	
 	public void insertarPacienteTratado(Paciente paciente) {
-		pacientesTratados.add(paciente);
+		misPacientesTratados.add(paciente);
 	}
 	
 	public void insertarConsultaTratada(Consulta consulta) {
-		consultasTratadas.add(consulta);
+		misConsultasTratadas.add(consulta);
 	}
 	
 	//METODOS PARA ELIMINAR:
 	
 	public void eliminarPacienteTratado(Paciente paciente) {
-	    pacientesTratados.remove(paciente);
+		misPacientesTratados.remove(paciente);
 	}
 
 	public void eliminarConsultaTratada(Consulta consulta) {
-	    consultasTratadas.remove(consulta);
+		misConsultasTratadas.remove(consulta);
 	}
 
 	// METODOS PARA MODIFICAR:
 
 	public void actualizarPacienteTratado(Paciente paciente) {
 	    int index = buscarPacienteTratadoByCodigo(paciente.getCodigo());
-	    pacientesTratados.set(index, paciente);
+	    misPacientesTratados.set(index, paciente);
 	}
 	
 	private int buscarPacienteTratadoByCodigo(String codigo) {
@@ -66,8 +82,8 @@ public class Doctor extends Persona {
 	    boolean encontrado = false;
 	    int i = 0;
 
-	    while (!encontrado && i < pacientesTratados.size()) {
-	        if (pacientesTratados.get(i).getCodigo().equalsIgnoreCase(codigo)) {
+	    while (!encontrado && i < misPacientesTratados.size()) {
+	        if (misPacientesTratados.get(i).getCodigo().equalsIgnoreCase(codigo)) {
 	            encontrado = true;
 	            index = i;
 	        }
@@ -79,7 +95,7 @@ public class Doctor extends Persona {
 
 	public void actualizarConsultaTratada(Consulta consulta) {
 	    int index = buscarConsultaTratadaByCodigo(consulta.getCodigo());
-	    consultasTratadas.set(index, consulta);
+	    misConsultasTratadas.set(index, consulta);
 	}
 	
 	private int buscarConsultaTratadaByCodigo(String codigo) {
@@ -87,8 +103,8 @@ public class Doctor extends Persona {
 	    boolean encontrado = false;
 	    int i = 0;
 
-	    while (!encontrado && i < consultasTratadas.size()) {
-	        if (consultasTratadas.get(i).getCodigo().equalsIgnoreCase(codigo)) {
+	    while (!encontrado && i < misConsultasTratadas.size()) {
+	        if (misConsultasTratadas.get(i).getCodigo().equalsIgnoreCase(codigo)) {
 	            encontrado = true;
 	            index = i;
 	        }
