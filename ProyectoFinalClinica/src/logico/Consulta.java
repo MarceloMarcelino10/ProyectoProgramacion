@@ -49,4 +49,5 @@ public class Consulta {
 	public void setMicita(Cita micita) {
 		Micita = micita;
 	}
+	//
 }
