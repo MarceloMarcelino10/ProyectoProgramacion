@@ -7,11 +7,13 @@ public class Consulta {
 	
 	private String codigo;
 	private ArrayList<Enfermedad> misEnfermedades;
+	private Cita Micita;
 	private Date fechaConsulta;
 	
-	public Consulta(String codigo) {
+	public Consulta(String codigo, Cita Micita) {
 		super();
 		this.codigo = codigo;
+		this.Micita = Micita;
 		this.misEnfermedades = new ArrayList<Enfermedad>();
 		this.fechaConsulta = new Date();
 	}
@@ -38,5 +40,13 @@ public class Consulta {
 
 	public void setFechaConsulta(Date fechaConsulta) {
 		this.fechaConsulta = fechaConsulta;
+	}
+
+	public Cita getMicita() {
+		return Micita;
+	}
+
+	public void setMicita(Cita micita) {
+		Micita = micita;
 	}
 }
