@@ -38,6 +38,4 @@ public class Paciente extends Persona {
 	public void setTipoSangre(String tipoSangre) {
 		TipoSangre = tipoSangre;
 	}
-	
-	//
 }

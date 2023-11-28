@@ -279,7 +279,6 @@ public class Clinica {
 			}
 			i++;
 		}
-		
 		return aux;
 	}
 }
