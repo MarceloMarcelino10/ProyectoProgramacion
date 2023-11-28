@@ -145,11 +145,11 @@ public class Clinica {
     //METODOS PARA ACTUALIZAR EL ELEMENTO DE UNA LISTA:
 	
     public void actualizarVivienda(Vivienda vivienda) {
-    	int index = buscarViviendaByCode(vivienda.getCodigo());
+    	int index = buscarViviendaByIndex(vivienda.getCodigo());
     	misViviendas.set(index, vivienda);
     }
 	
-	private int buscarViviendaByCode(String codigo) {
+	private int buscarViviendaByIndex(String codigo) {
 		int index = -1;
 		boolean encontrado = false;
 		int i = 0;
@@ -164,11 +164,11 @@ public class Clinica {
 	}
 	
 	public void actualizarPersona(Persona persona) {
-        int index = buscarPersonaByCode(persona.getCodigo());
+        int index = buscarPersonaByIndex(persona.getCodigo());
             misPersonas.set(index, persona);
     }
 
-    private int buscarPersonaByCode(String codigo) {
+    private int buscarPersonaByIndex(String codigo) {
         int index = -1;
         boolean encontrado = false;
         int i = 0;
@@ -183,11 +183,11 @@ public class Clinica {
     }
 
     public void actualizarEnfermedad(Enfermedad enfermedad) {
-        int index = buscarEnfermedadByCode(enfermedad.getCodigo());
+        int index = buscarEnfermedadByIndex(enfermedad.getCodigo());
             misEnfermedades.set(index, enfermedad);
     }
 
-    private int buscarEnfermedadByCode(String codigo) {
+    private int buscarEnfermedadByIndex(String codigo) {
         int index = -1;
         boolean encontrado = false;
         int i = 0;
@@ -202,11 +202,11 @@ public class Clinica {
     }
 
     public void actualizarCita(Cita cita) {
-        int index = buscarCitaByCode(cita.getCodigo());
+        int index = buscarCitaByIndex(cita.getCodigo());
             misCitas.set(index, cita);
     }
 
-    private int buscarCitaByCode(String codigo) {
+    private int buscarCitaByIndex(String codigo) {
         int index = -1;
         boolean encontrado = false;
         int i = 0;
@@ -221,11 +221,11 @@ public class Clinica {
     }
 
     public void actualizarVacuna(Vacuna vacuna) {
-        int index = buscarVacunaByCode(vacuna.getCodigo());
+        int index = buscarVacunaByIndex(vacuna.getCodigo());
             misVacunas.set(index, vacuna);
     }
 
-    private int buscarVacunaByCode(String codigo) {
+    private int buscarVacunaByIndex(String codigo) {
         int index = -1;
         boolean encontrado = false;
         int i = 0;
@@ -240,11 +240,11 @@ public class Clinica {
     }
 
     public void actualizarConsulta(Consulta consulta) {
-        int index = buscarConsultaByCode(consulta.getCodigo());
+        int index = buscarConsultaByIndex(consulta.getCodigo());
             misConsultas.set(index, consulta);
     }
 
-    private int buscarConsultaByCode(String codigo) {
+    private int buscarConsultaByIndex(String codigo) {
         int index = -1;
         boolean encontrado = false;
         int i = 0;

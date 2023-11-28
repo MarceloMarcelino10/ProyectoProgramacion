@@ -64,11 +64,11 @@ public class Consulta {
 	// METODO PARA MODIFICAR:
 	
 	public void actualizarEnfermedad(Enfermedad enfermedad) {
-        int index = buscarEnfermedadByCode(enfermedad.getCodigo());
+        int index = buscarEnfermedadByIndex(enfermedad.getCodigo());
             misEnfermedades.set(index, enfermedad);
     }
 
-    private int buscarEnfermedadByCode(String codigo) {
+    private int buscarEnfermedadByIndex(String codigo) {
         int index = -1;
         boolean encontrado = false;
         int i = 0;
