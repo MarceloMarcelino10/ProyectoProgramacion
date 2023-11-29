@@ -39,4 +39,4 @@ public class PrincipalVisual extends JFrame {
 		setContentPane(contentPane);
 	}
 
-}
+}//
