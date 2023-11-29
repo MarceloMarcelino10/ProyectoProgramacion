@@ -10,8 +10,8 @@ public class Doctor extends Persona {
 	private ArrayList<Consulta> misConsultasTratadas;
 	
 	public Doctor(String codigo, String cedula, String nombre, String apellidos, String genero, String user,
-			String password, String especialidad, boolean enServicio) {
-		super(codigo, cedula, nombre, apellidos, genero, user, password);
+			String password, int Rango,String especialidad, boolean enServicio) {
+		super(codigo, cedula, nombre, apellidos, genero, user, password, Rango);
 		this.especialidad = especialidad;
 		this.enServicio = enServicio;
 		this.misPacientesTratados = new ArrayList<Paciente>();

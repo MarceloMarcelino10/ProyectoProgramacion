@@ -12,17 +12,19 @@ public class Persona {
 	private String genero;
 	private String user;
 	private String password;
+	private int Rango;
 	
-	public Persona(String codigo, String cedula, String nombre, String apellidos, String genero, String user, String password) {
+	public Persona(String codigo, String cedula, String nombre, String apellidos, String genero, String user, String password, int Rango) {
 		super();
 		this.codigo = codigo;
 		this.cedula = cedula;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
-		this.fechaNacimiento = new Date();;
+		this.fechaNacimiento = new Date();
 		this.genero = genero;
 		this.user = user;
 		this.password = password;
+		this.Rango = Rango;
 	}
 
 	public String getCodigo() {
@@ -88,4 +90,12 @@ public class Persona {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-}
+
+	public int getRango() {
+		return Rango;
+	}
+
+	public void setRango(int rango) {
+		Rango = rango;
+	}
+}////

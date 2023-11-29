@@ -5,9 +5,9 @@ public class main {
 	public static void main(String[] args) {
 		
 		//Prueba de login:
-		Doctor d = new Doctor("123", "123", "Maxi Emiliano", "Alegrie", "Masculino", "Milan", "123", "Cirujano Nocturno", true);
-		Paciente p = new Paciente("12", "12", "Juan", "Perez", "Masculino", "juan", "juan123", null, null,null);
-		Paciente p1 = new Paciente("12", "12", "Perez", "Gomex", "Masculino", "Vol", "juan123", null, null,null); //Luego hacer un metodo para revisar que no se repita un usuario
+		Doctor d = new Doctor("123", "123", "Maxi Emiliano", "Alegrie", "Masculino", "Milan", "123", 0, "Cirujano Nocturno", true);
+		Paciente p = new Paciente("12", "12", "Juan", "Perez", "Masculino", "juan", "juan123", null, 0, null,null);
+		Paciente p1 = new Paciente("12", "12", "Perez", "Gomex", "Masculino", "Vol", "juan123", null, 0, null,null); //Luego hacer un metodo para revisar que no se repita un usuario
 		
 		Clinica.getInstance().insertarPersona(p);
 		Clinica.getInstance().insertarPersona(d);
@@ -38,4 +38,4 @@ public class main {
             System.out.println(d.getMisPacientesTratados().get(i).getNombre());
         }
 	}
-}
+}///

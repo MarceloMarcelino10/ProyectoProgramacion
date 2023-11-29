@@ -7,9 +7,9 @@ public class Paciente extends Persona {
 	private String TipoSangre;
 	
 	public Paciente(String codigo, String cedula,  String TipoSangre, String nombre, String apellidos, String genero, String user,
-			String password, Vivienda miVivienda, HistoriaClinica miHistoria) {
+			String password,int Rango, Vivienda miVivienda, HistoriaClinica miHistoria) {
 		
-		super(codigo, cedula, nombre, apellidos, genero, user, password);
+		super(codigo, cedula, nombre, apellidos, genero, user, password,Rango);
 		this.miVivienda = miVivienda;
 		this.miHistoria = miHistoria;
 		this.TipoSangre = TipoSangre;
@@ -38,4 +38,6 @@ public class Paciente extends Persona {
 	public void setTipoSangre(String tipoSangre) {
 		TipoSangre = tipoSangre;
 	}
+	
+	////
 }
